@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //check if this is the first start up
+        let firstStartUpController = self.storyboard?.instantiateViewControllerWithIdentifier("FirstStartUpController") as? FirstStartUpController
+        self.navigationController.pushViewController(firstStartUpController, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
